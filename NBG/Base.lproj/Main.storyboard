@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EKf-6G-Rc0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--ეროვნული ბანკი-->
+        <scene sceneID="TTx-cx-Kj5">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="0gY-hL-t2t" customClass="MainTableViewController" customModule="NBG" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kSG-xN-LLJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="tuf-EP-EYl" customClass="MainTableViewCell" customModule="NBG" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tuf-EP-EYl" id="tB0-8T-e2c">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" scrollEnabled="NO" text="fgdshjfgdgsdkfghkjsdfhgkjsdkfghsdfghjksdfjkgsdkfgksdfkgsdfgksdhgjksdhfkghsdgsdkjfgksdhfgjkshdjkgsdfhgjkdhfjkghsjkklsjfdg" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RY0-KH-kBp">
+                                            <rect key="frame" x="18" y="18" width="522" height="7.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zks-4c-4v9">
+                                            <rect key="frame" x="550" y="18" width="42" height="7.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Zks-4c-4v9" secondAttribute="bottom" constant="10" id="3m8-K3-uL4"/>
+                                        <constraint firstItem="Zks-4c-4v9" firstAttribute="leading" secondItem="RY0-KH-kBp" secondAttribute="trailing" constant="10" id="97t-X2-q8T"/>
+                                        <constraint firstItem="Zks-4c-4v9" firstAttribute="trailing" secondItem="tB0-8T-e2c" secondAttribute="trailingMargin" id="GFs-xY-Bv4"/>
+                                        <constraint firstItem="RY0-KH-kBp" firstAttribute="top" secondItem="tB0-8T-e2c" secondAttribute="topMargin" constant="10" id="LMz-iD-TW4"/>
+                                        <constraint firstItem="Zks-4c-4v9" firstAttribute="leading" secondItem="RY0-KH-kBp" secondAttribute="trailing" constant="10" id="LYd-2s-dKz"/>
+                                        <constraint firstItem="RY0-KH-kBp" firstAttribute="leading" secondItem="tB0-8T-e2c" secondAttribute="leadingMargin" constant="10" id="SC6-Rb-lNC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RY0-KH-kBp" secondAttribute="bottom" constant="10" id="Zzz-H1-BWa"/>
+                                        <constraint firstItem="Zks-4c-4v9" firstAttribute="top" secondItem="tB0-8T-e2c" secondAttribute="topMargin" constant="10" id="gQt-ie-wrU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="currencyRateLabel" destination="Zks-4c-4v9" id="FzG-Cb-NLd"/>
+                                    <outlet property="rateNameTextView" destination="RY0-KH-kBp" id="c8H-7C-HzX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0gY-hL-t2t" id="g4j-AJ-iFC"/>
+                            <outlet property="delegate" destination="0gY-hL-t2t" id="f6l-yj-aOB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ეროვნული ბანკი" id="gg0-CH-RDO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHo-IM-5Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="964" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qf6-PM-bW3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EKf-6G-Rc0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4SE-XW-SQV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0gY-hL-t2t" kind="relationship" relationship="rootViewController" id="KHu-Tu-rXn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Q9-OM-4xR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="141"/>
         </scene>
     </scenes>
 </document>
