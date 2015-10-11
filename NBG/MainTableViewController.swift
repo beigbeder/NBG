@@ -143,10 +143,6 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         cell.rateNameTextView?.text = rate.currencyName
         cell.currencyRateLabel?.text = rate.currencyRate
         
-        //asdja
-        
-        
-
         return cell
     }
     
