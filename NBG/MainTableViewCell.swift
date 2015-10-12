@@ -12,4 +12,6 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var rateNameTextView: UITextView!
 
     @IBOutlet weak var currencyRateLabel: UILabel!
+    
+    @IBOutlet weak var rateChangeValue: UILabel!
 }

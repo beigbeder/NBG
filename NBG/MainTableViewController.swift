@@ -142,6 +142,7 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         
         cell.rateNameTextView?.text = rate.currencyName
         cell.currencyRateLabel?.text = rate.currencyRate
+        cell.rateChangeValue?.text = rate.currencyRateChangeValue
         
         return cell
     }
