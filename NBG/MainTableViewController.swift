@@ -27,6 +27,7 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         super.viewDidLoad()
         
         searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "type code, example : usd "
         searchController.searchResultsUpdater = self
         
         searchController.dimsBackgroundDuringPresentation = false
@@ -70,8 +71,16 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
                     rateObj.currencyCode = tdList[0].text
                     rateObj.currencyName = tdList[1].text
                     rateObj.currencyRate = tdList[2].text
-                    
                     rateObj.currencyRateChangeValue = tdList[4].text
+                    
+                    if tdList[3].toHTML!.containsString("green")
+                    {
+                        rateObj.increase = true
+                    }
+                    else
+                    {
+                        rateObj.increase = false
+                    }
                     
                     rateArray.append(rateObj)
                     
@@ -143,6 +152,15 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         cell.rateNameTextView?.text = rate.currencyName
         cell.currencyRateLabel?.text = rate.currencyRate
         cell.rateChangeValue?.text = rate.currencyRateChangeValue
+        
+        if rate.increase!
+        {
+            cell.rateChangeValue.textColor = UIColor.init(red: 0, green: 180/255, blue: 0, alpha: 1)
+        }
+        else
+        {
+            cell.rateChangeValue.textColor = UIColor.redColor()
+        }
         
         return cell
     }
