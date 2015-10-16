@@ -27,7 +27,7 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         super.viewDidLoad()
         
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "type code, example : usd "
+        searchController.searchBar.placeholder = "Type code, example : USD"
         searchController.searchResultsUpdater = self
         
         searchController.dimsBackgroundDuringPresentation = false
@@ -152,6 +152,7 @@ class MainTableViewController: UITableViewController , NSXMLParserDelegate ,UISe
         cell.rateNameTextView?.text = rate.currencyName
         cell.currencyRateLabel?.text = rate.currencyRate
         cell.rateChangeValue?.text = rate.currencyRateChangeValue
+        cell.currencyCodeLabel?.text = rate.currencyCode
         
         if rate.increase!
         {
